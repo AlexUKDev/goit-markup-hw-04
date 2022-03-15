@@ -10,16 +10,16 @@
   --btn-bg-color: #f5f4fa;
   --border-bottom-color: #ececec;
   --border-color: #eeeeee;
+  --default-social-icon-color: #afb1b8;
 }
-
-/* html {
+html {
   box-sizing: border-box;
 }
 *,
 *::before,
 *::after {
   box-sizing: inherit;
-} */
+}
 
 /* Basic inherited properties */
 body {
@@ -34,6 +34,19 @@ body {
 
   margin: 0;
   padding: 0;
+}
+/* Visually-hidden*/
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
 }
 
 h1,
@@ -214,26 +227,6 @@ ul {
   cursor: pointer;
 }
 
-/* Reset standard styles*/
-.pros-section {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
-
-/* Semantic header visually-hidden*/
-.visually-hidden {
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  border: 0;
-  padding: 0;
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  margin: -1px;
-}
-
 .pros-list,
 .team-list {
   display: flex;
@@ -242,10 +235,34 @@ ul {
   padding: 0;
   list-style: none;
 }
+
 /* Pros section syles  */
+.pros-section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.pros-icons-wrap {
+  margin-bottom: 30px;
+  width: 270px;
+  height: 120px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 4px;
+  background: var(--btn-bg-color);
+}
+.pros-icons {
+  /* margin-left: auto;
+  margin-right: auto; */
+  width: 70px;
+  height: 70px;
+}
 .pros-list .items {
   width: 270px;
 }
+
 .pros-title {
   color: var(--title-text-color);
   font-weight: 700;
@@ -327,6 +344,38 @@ ul {
   text-align: center;
   font-weight: 400;
   font-size: 16px;
+}
+
+.social-icons-wrap {
+  display: flex;
+  justify-content: space-evenly;
+
+  margin-top: 16px;
+  margin-right: auto;
+  margin-left: auto;
+  width: 206px;
+}
+.social-bg-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  height: 44px;
+  width: 44px;
+  fill: var(--default-social-icon-color);
+}
+.social-links {
+}
+.social-icons {
+  font: inherit;
+  width: 20px;
+  height: 20px;
+
+  fill: inherit;
+}
+.social-bg-wrap:hover {
+  background-color: var(--accent-color);
+  fill: var(--primary-white-color);
 }
 
 /* Footer section styles */
