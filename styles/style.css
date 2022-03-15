@@ -378,6 +378,34 @@ ul {
   fill: var(--primary-white-color);
 }
 
+/* Costomers section styles */
+.customers-section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.customers {
+  height: 184px;
+}
+.customers-list {
+  display: flex;
+}
+.customers-items:not(:last-child) {
+  padding-right: 30px;
+}
+.customers-icon-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 170px;
+  height: 92px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.customers-icon-wrap:hover,
+.customers-icon-wrap:focus {
+  border-color: var(--accent-color);
+}
 /* Footer section styles */
 .footer-section {
   padding-top: 60px;
