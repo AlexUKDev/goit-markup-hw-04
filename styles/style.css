@@ -104,9 +104,19 @@ ul {
   margin-left: auto;
 }
 
+.icons-wrap {
+  display: inline-block;
+  vertical-align: middle;
+  padding-right: 10px;
+}
+.icons {
+  fill: inherit;
+}
+
 .nav-links,
 .contacts-links {
   color: var(--primary-text-color);
+  fill: var(--primary-text-color);
   text-decoration: none;
 }
 .nav-list .items:not(:last-child) {
@@ -137,6 +147,7 @@ ul {
 .contacts-links.footer:hover,
 .contacts-links:focus {
   color: var(--accent-color);
+  fill: var(--accent-color);
 }
 
 /* Hero-section styles*/
@@ -144,10 +155,20 @@ ul {
   height: fit-content;
   text-align: center;
 
+  max-width: 1600px;
   padding-top: 200px;
   padding-bottom: 200px;
-  /* BG для видимости белого цвета */
+
   background-color: var(--gray-bg-color);
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.4)
+    ),
+    url(../images/hero-bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .hero {
