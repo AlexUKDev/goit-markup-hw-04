@@ -471,6 +471,10 @@ ul {
   background-color: var(--footer-icons-bg);
 }
 
+.footer-social-icons > .social-icons-wrap {
+  margin-top: 20px;
+}
+
 /* Portfolio.html styles */
 .portfolio-section {
   padding-top: 94px;
