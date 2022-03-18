@@ -129,6 +129,9 @@ ul {
 
 .nav-links,
 .contacts-links {
+  display: flex;
+  align-items: center;
+
   color: var(--primary-text-color);
   fill: var(--primary-text-color);
   text-decoration: none;
@@ -172,6 +175,8 @@ ul {
   max-width: 1600px;
   padding-top: 200px;
   padding-bottom: 200px;
+  margin-left: auto;
+  margin-right: auto;
 
   background-color: var(--gray-bg-color);
   background-image: linear-gradient(
@@ -349,21 +354,30 @@ ul {
 
 .social-icons-wrap {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
 
   margin-top: 16px;
-  margin-right: auto;
-  margin-left: auto;
-  width: 206px;
+}
+.social-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 44px;
+  width: 44px;
 }
 .social-bg-wrap {
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
+
   height: 44px;
   width: 44px;
+
   fill: var(--default-social-icon-color);
+}
+.social-bg-wrap:not(:last-child) {
+  margin-right: 10px;
 }
 
 .social-icons {
@@ -393,9 +407,10 @@ ul {
   display: flex;
 }
 .customers-items:not(:last-child) {
-  padding-right: 30px;
+  margin-right: 30px;
 }
 .customers-icon-wrap {
+  fill: var(--default-social-icon-color);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -403,12 +418,16 @@ ul {
   height: 92px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .customers-icon-wrap:hover,
 .customers-icon-wrap:focus {
   border-color: var(--accent-color);
+  fill: var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.customers-icons {
+  fill: inherit;
 }
 /* Footer section styles */
 .footer-section {
@@ -420,8 +439,7 @@ ul {
 
 .container.footer {
   display: flex;
-
-  margin-bottom: 0;
+  align-items: baseline;
 
   color: var(--primary-white-color);
 }
@@ -508,7 +526,10 @@ ul {
   margin-right: 30px;
   margin-bottom: 30px;
 }
-
+.portfolio-content-items:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
 .portfolio-content-items:nth-child(3n) {
   margin-right: 0;
 }
@@ -542,10 +563,11 @@ ul {
   height: 38px;
 }
 .filter-btn:hover,
+.filter-btn:focus,
 .active {
   background-color: var(--accent-color);
   color: var(--primary-white-color);
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .portfolio-links {
