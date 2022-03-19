@@ -569,6 +569,7 @@ ul {
 }
 
 .portfolio-links {
+  display: block;
   text-decoration: none;
 }
 .portfolio-links:hover,
